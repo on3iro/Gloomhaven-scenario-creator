@@ -7,6 +7,6 @@
 
 This is a WiP scenario creator project for the boardgame Gloomhaven
 
-[Backend](https://github.com/on3iro/Gloomhaven-SC-backend/blob/master/)
+[Backend](https://github.com/on3iro/Gloomhaven-SC-backend)
 
 [Game information](http://www.cephalofair.com/gloomhaven) Game by Isaac Childres
