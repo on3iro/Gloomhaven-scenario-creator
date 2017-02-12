@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavEntry from './navEntry';
+import NavEntry from './NavEntry';
 
 
 // Named export for separate access (e.g. for unit tests)
