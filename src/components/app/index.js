@@ -7,6 +7,9 @@ export default class App extends Component {
   /**
    * Main App component
    * Wraps children
+   *
+   * @class App
+   * @props children {Nodes}
     */
 
   render() {
