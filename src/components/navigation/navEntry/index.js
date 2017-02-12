@@ -9,10 +9,10 @@ export const NavEntry = props => {
    * Renders a list item containing a react-router Link.
    *
    * @function NavEntry
-   * @props:
-   *  @param url {String} Url to link to
-   *  @param children {String} Link text
-   * @returns {Nodes}
+   * @param {Object} props - React props
+   * @param {String} props.url -  Url to link to
+   * @param {String} props.children -  Link text
+   * @returns Component
     */
 
   return (
