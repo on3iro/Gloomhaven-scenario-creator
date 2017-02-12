@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Link } from 'react-router';
 
-import NavEntry from '../navEntry';
+import NavEntry from '../NavEntry';
 
 
 describe('NavEntry', () => {

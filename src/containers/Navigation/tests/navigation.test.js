@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Navigation from '../';
-import NavEntry from '../navEntry';
+import NavEntry from '../NavEntry';
 
 describe('Navigation', () => {
   it('Should render self and subcomponents', () => {
