@@ -5,8 +5,12 @@ import Navigation from '../navigation';
 
 export default class App extends Component {
   /**
-   * Main App component
+   * Main App component.
    * Wraps children
+   *
+   * @class App
+   * @param {Object} props - React props
+   * @param {Node} props.children - Child components
     */
 
   render() {
