@@ -6,6 +6,7 @@
 [![On Discord](https://img.shields.io/badge/GSC--Discord-https%3A%2F%2Fdiscord.gg%2FqDGBCAB-blue.svg?style=flat-square)](https://discord.gg/qDGBCAB)
 [![API Doc](https://doclets.io/on3iro/Gloomhaven-scenario-creator/dev.svg)](https://doclets.io/on3iro/Gloomhaven-scenario-creator/dev)
 
+## Table of contents
 * [About](#about)
 * [Contribution](#contribution)
 
