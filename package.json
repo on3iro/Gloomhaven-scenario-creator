@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "test_watch": "jest --coverage --watch",
+    "test:watch": "jest --coverage --watch",
     "start": "node server",
     "coveralls": "npm run test && cat ./coverage/lcov.info | coveralls",
     "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors",
@@ -30,6 +30,16 @@
     "url": "https://github.com/on3iro/Gloomhaven-scenario-creator/issues"
   },
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "coverageReporters": [
       "json",
       "lcov",
@@ -51,6 +61,7 @@
     "babel-register": "^6.22.0",
     "coveralls": "^2.11.16",
     "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "eslint": "^3.15.0",
     "eslint-loader": "^1.6.1",
@@ -65,6 +76,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-test-renderer": "^15.4.2",
     "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
@@ -81,6 +93,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4",
+    "sanitize.css": "^4.1.0",
     "styled-components": "^1.4.3"
   }
 }

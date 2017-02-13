@@ -1,23 +1,23 @@
 import React from 'react';
 
-import NavEntry from './NavEntry';
+import Entry from './Entry';
 
 
 // Named export for separate access (e.g. for unit tests)
 export const Navigation = () => {
 /**
-  * This is the main navigation component of the application.
+  * The main Navigation of the app. Renders multiple navigation entries.
   *
   * @function Navigation
-  * @returns Component
+  * @returns {Node} Component
   */
 
   return (
     <div>
       <nav>
         <ul>
-          <NavEntry url="/">Home</NavEntry>
-          <NavEntry url="/impressum">Impressum</NavEntry>
+          <Entry url="/">Home</Entry>
+          <Entry url="/impressum">Impressum</Entry>
         </ul>
       </nav>
     </div>

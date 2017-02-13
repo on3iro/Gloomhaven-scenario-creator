@@ -1,16 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 
-import Navigation from '../Navigation';
+import Navigation from 'components/Navigation';
 
 
 export default class App extends Component {
   /**
-   * Main App component.
+   * Main App component
    * Wraps children
    *
-   * @class App
    * @param {Object} props - React props
-   * @param {Node} props.children - Child components
+   * @param {Object} props.children - Child Components
     */
 
   render() {

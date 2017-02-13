@@ -3,10 +3,10 @@ import React from 'react';
 
 export const Impressum = () => {
 /**
-  * Impressum page of the application
+  * 'Impressum'-page Component of the app
   *
-  * @function Impressum
-  * @returns h1
+    * @function Impressum
+    * @returns {Node} Component
   */
 
   return (
