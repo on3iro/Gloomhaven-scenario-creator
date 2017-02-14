@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/on3iro/Gloomhaven-scenario-creator/issues"
   },
+  "babel": {
+    "presets": ["react", "es2015", "stage-0"]
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
