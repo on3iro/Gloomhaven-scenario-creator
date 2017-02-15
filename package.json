@@ -11,7 +11,7 @@
     "test:watch": "jest --coverage --watch",
     "start": "node server",
     "coveralls": "npm run test && cat ./coverage/lcov.info | coveralls",
-    "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors",
+    "build": "rimraf dist && webpack --config ./webpack/webpack.production.config.js --progress --profile --colors",
     "eslint": "eslint ./"
   },
   "repository": {
@@ -28,6 +28,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/on3iro/Gloomhaven-scenario-creator/issues"
+  },
+  "babel": {
+    "presets": ["react", "es2015", "stage-0"]
   },
   "jest": {
     "moduleFileExtensions": [
