@@ -40,6 +40,9 @@ because I still have no confirmation of approval for the project from Isaac Chil
   - [ ] Login/Logout/Register
   - [ ] Create private scenarios
   - [ ] Create private campaigns
+- [ ] Hosting first Alpha-Version
+  - [ ] Host on digital ocean
+  - [ ] Inviting testers, open project for contribution
 - [ ] implementing backend CI-pipeline and unit tests
 - [ ] Scenario-/Campaign-(pre)view for quick game setup
 - [ ] Ratingsystem and public scenario + campaign listings to easily find good scenarios and campaigns
