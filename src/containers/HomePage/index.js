@@ -1,16 +1,23 @@
-import React from 'react';
-
-
-export const Home = () => {
 /**
-  * The 'Home'-page Component of the app.
+  * HomePage of the App
   *
-  * @function Home
-  * @returns {Node} Components
+  * @namespace HomePage
   */
 
+import React from 'react';
+
+import LoginForm from './LoginForm';
+import Wrapper from './Wrapper';
+import Button from 'components/Button';
+import StyledLink from 'components/StyledLink';
+
+
+const Home = () => {
   return (
-    <h1>This is Home!</h1>
+    <Wrapper>
+      <LoginForm />
+      <Button><StyledLink to="/register">Register</StyledLink></Button>
+    </Wrapper>
   );
 };
 
