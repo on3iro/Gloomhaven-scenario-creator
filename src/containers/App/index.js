@@ -1,23 +1,37 @@
+/**
+  * Main Application component.
+  *
+  * @namespace App
+  */
+
 import React, { Component, PropTypes } from 'react';
 
-import Navigation from 'components/Navigation';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Wrapper from './Wrapper';
+import Content from './Content';
 
 
 export default class App extends Component {
   /**
    * Main App component
    * Wraps children
-   *
+   * @class App
+   * @namespace App
+   * @memberOf App
    * @param {Object} props - React props
    * @param {Object} props.children - Child Components
     */
 
   render() {
     return (
-      <div>
-        <Navigation />
-        {this.props.children}
-      </div>
+      <Wrapper>
+        <Header />
+        <Content>
+          {this.props.children}
+        </Content>
+        <Footer />
+      </Wrapper>
     );
   }
 }
