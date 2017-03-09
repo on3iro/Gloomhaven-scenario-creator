@@ -40,7 +40,7 @@ because I still have no confirmation of approval for the project from Isaac Chil
   - [ ] Login/Logout/Register
   - [ ] Create private scenarios
   - [ ] Create private campaigns
-( - [ ] implementing backend CI-pipeline and unit tests )
+- [ ] implementing backend CI-pipeline and unit tests
 - [ ] Scenario-/Campaign-(pre)view for quick game setup
 - [ ] Ratingsystem and public scenario + campaign listings to easily find good scenarios and campaigns
 - [ ] Comment-system
