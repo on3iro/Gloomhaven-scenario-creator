@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <Wrapper>
       <LoginForm />
-      <Button><StyledLink to="/register">Register</StyledLink></Button>
+      <StyledLink to="/register">Register</StyledLink>
     </Wrapper>
   );
 };

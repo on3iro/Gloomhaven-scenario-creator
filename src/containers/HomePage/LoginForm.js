@@ -6,6 +6,10 @@
   */
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { testSaga } from './ducks/reducers';
 
 import H1 from 'components/H1';
 import Button from 'components/Button';
@@ -78,10 +82,17 @@ class LoginForm extends Component {
           value={this.state.password}
           onChange={this.handleInputChange}
         />
-        <Button submit>Login</Button>
+        <Button submit >Login</Button>
+        <Button onClick={this.props.testSaga}>Saga</Button>
       </form>
     );
   }
 }
 
-export default LoginForm;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    testSaga,
+  }, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(LoginForm);
