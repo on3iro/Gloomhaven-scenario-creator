@@ -8,6 +8,7 @@
 
 ## Table of contents
 * [About](#about)
+* [Roadmap](#roadmap)
 * [Contribution](#contribution)
 
 ## About
