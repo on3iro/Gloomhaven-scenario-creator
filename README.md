@@ -33,7 +33,7 @@ There is currently no specific timeframe for each individual goal, because I am 
 because I still have no confirmation of approval for the project from Isaac Childres as of yet.
 
 - [ ] Basic backend API
-  - [ ] User registration and login
+  - [x] User registration and login
   - [ ] Basic scenario creation
   - [ ] Basic campaign creation
 - [ ] Initial Frontend
