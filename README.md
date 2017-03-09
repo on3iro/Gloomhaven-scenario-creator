@@ -8,6 +8,7 @@
 
 ## Table of contents
 * [About](#about)
+* [Roadmap](#roadmap)
 * [Contribution](#contribution)
 
 ## About
@@ -47,6 +48,9 @@ because I still have no confirmation of approval for the project from Isaac Chil
 - [ ] Scenario-/Campaign-(pre)view for quick game setup
 - [ ] Ratingsystem and public scenario + campaign listings to easily find good scenarios and campaigns
 - [ ] Comment-system
+- [ ] Layout-Overhaul, General Design
+  - [ ] Logo
+  - [ ] Layout
 - [ ] Release Beta, open to public
 - [ ] Dynamic canvas map-editor
 - [ ] User-Profiles + Characterclass-Flairs
