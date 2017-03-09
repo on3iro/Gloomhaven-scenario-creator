@@ -25,6 +25,33 @@ I also plan to keep this app free and open source forever.
 This web frontend is based on [React](https://facebook.github.io/react/) + [Redux](http://redux.js.org/)
 and should be used in conjunction with a [Backend-API](https://github.com/on3iro/Gloomhaven-SC-backend).
 
+## Roadmap
+The following roadmap should highlight some development milestones and goals from top to bottom.
+As certain features are going to be implemented, sub goals might appear.
+Also priority of certain goals might change in the future, depending on user feedback.
+There is currently no specific timeframe for each individual goal, because I am very busy right now and
+because I still have no confirmation of approval for the project from Isaac Childres as of yet.
+
+- [ ] Basic backend API
+  - [x] User registration and login
+  - [ ] Basic scenario creation
+  - [ ] Basic campaign creation
+- [ ] Initial Frontend
+  - [ ] Login/Logout/Register
+  - [ ] Create private scenarios
+  - [ ] Create private campaigns
+- [ ] Hosting first Alpha-Version
+  - [ ] Host on digital ocean
+  - [ ] Inviting testers, open project for contribution
+- [ ] implementing backend CI-pipeline and unit tests
+- [ ] Scenario-/Campaign-(pre)view for quick game setup
+- [ ] Ratingsystem and public scenario + campaign listings to easily find good scenarios and campaigns
+- [ ] Comment-system
+- [ ] Release Beta, open to public
+- [ ] Dynamic canvas map-editor
+- [ ] User-Profiles + Characterclass-Flairs
+- [ ] Asset creator
+
 ## Contribution
 I am still developing the project baseline and therefore am not yet taking any contributions.
 Eventually I will, though!
