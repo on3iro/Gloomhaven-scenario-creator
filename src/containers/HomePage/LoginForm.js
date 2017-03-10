@@ -11,6 +11,7 @@ import { Field, reduxForm } from 'redux-form';
 import H1 from 'components/H1';
 import Button from 'components/Button';
 import Input from 'components/Input';
+import Span from 'components/Span';
 
 
 const validate = values => {
@@ -36,9 +37,9 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
         {...input}
         placeholder={label}
         type={type}
-        error={error}
+        error={touched && error}
       />
-      {touched && error && <span>{error}</span>}
+      {touched && error && <Span error={touched && error}>{error}</Span>}
     </div>
   );
 };
