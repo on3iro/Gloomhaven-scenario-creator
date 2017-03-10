@@ -14,12 +14,18 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import 'sanitize.css/sanitize.css';
 import './global-styles';
 
-import store from './store';
+import configureStore from './store';
+import rootSaga from './rootSaga';
 import routes from './routes';
 
 
 const rootElement = document.getElementById('root');
+const initialState = {};
+const store = configureStore(initialState);
 const history = syncHistoryWithStore(hashHistory, store);
+
+// Run rootSaga
+store.runSaga(rootSaga);
 
 ReactDom.render(
   <Provider store={store}>
