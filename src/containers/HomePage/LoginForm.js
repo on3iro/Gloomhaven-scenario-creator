@@ -5,94 +5,65 @@
   * @memberOf HomePage
   */
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import { testSaga } from './ducks/reducers';
+import React, { PropTypes } from 'react';
+import { Field, reduxForm } from 'redux-form';
 
 import H1 from 'components/H1';
 import Button from 'components/Button';
 import Input from 'components/Input';
 
 
-class LoginForm extends Component {
-  /**
-    * Class component LoginForm
-    *
-    * @class LoginForm
-    * @namespace LoginForm
-    * @memberOf HomePage.LoginForm
-    */
+const validate = values => {
+  const errors = {};
 
-  constructor(props) {
-    /**
-      * Constructor of the LoginForm
-      *
-      * @constructs
-      * @memberOf HomePage.LoginForm.LoginForm
-      */
-
-    super(props);
-
-    this.state = {
-      email: '',
-      password: '',
-    };
+  if(!values.email) {
+    errors.email = 'Required';
+  }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address'
   }
 
-  handleInputChange = (event) => {
-    /**
-      * Handles changes on input elements.
-      * Sets the value of the respective input.
-      *
-      * @method handleInputChange
-      * @memberOf HomePage.LoginForm.LoginForm
-      * @namespace handleInputChange
-      * @param {Object} event - Triggered event
-      * @returns {undefined}
-      */
-
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value,
-    });
-
-    return undefined;
+  if(!values.password) {
+    errors.password = 'Required';
   }
 
-  render() {
-    return (
-      <form onSubmit={() => {}}>
-        <H1>Login</H1>
-        <Input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={this.state.email}
-          onChange={this.handleInputChange}
-        />
-        <Input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.handleInputChange}
-        />
-        <Button submit >Login</Button>
-        <Button onClick={this.props.testSaga}>Saga</Button>
-      </form>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    testSaga,
-  }, dispatch);
+  return errors;
 };
 
-export default connect(null, mapDispatchToProps)(LoginForm);
+const renderField = ({ input, label, type, meta: { touched, error } }) => {
+  return (
+    <div>
+      <Input
+        {...input}
+        placeholder={label}
+        type={type}
+        error={error}
+      />
+      {touched && error && <span>{error}</span>}
+    </div>
+  );
+};
+
+const LoginForm = props => {
+  return (
+    <form onSubmit={props.handleSubmit}>
+      <H1>Login</H1>
+      <Field name="email" type="text"
+        component={renderField} label="email"
+      />
+      <Field name="password" type="text"
+        component={renderField} label="password"
+      />
+      <Button submit >Login</Button>
+    </form>
+  );
+}
+
+LoginForm.propTypes = {
+  // TODO
+};
+
+// Decorate the form component
+export default reduxForm({
+  form: 'login',
+  validate
+})(LoginForm);
