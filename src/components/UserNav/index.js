@@ -12,7 +12,7 @@ import NavLink from './NavLink';
 const UserNav = () => {
   return (
     <NavBar>
-      <NavLink to="/" >
+      <NavLink to="/login" >
         Login
       </NavLink>
       <NavLink to="/register" >

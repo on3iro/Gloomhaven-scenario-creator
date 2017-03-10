@@ -1,35 +1,18 @@
 /**
-  * HomePage of the App
-  *
-  * @namespace HomePage
+ * The HomePage/Landing page
   */
 
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-import LoginForm from './LoginForm';
 import Wrapper from './Wrapper';
-import Button from 'components/Button';
-import StyledLink from 'components/StyledLink';
 
 
-class Home extends Component {
-  handleSubmit = (values) => {
-    console.log(values);
-  }
-
-  render() {
-    return (
-      <Wrapper>
-        <LoginForm onSubmit={this.handleSubmit} />
-        <StyledLink to="/register">Register</StyledLink>
-      </Wrapper>
-    );
-  }
-}
-
-Home.propTypes = {
-  // TODO
+const HomePage = () => {
+  return (
+    <Wrapper>
+      <h1>Home page...</h1>
+    </Wrapper>
+  );
 };
 
-
-export default Home;
+export default HomePage;
