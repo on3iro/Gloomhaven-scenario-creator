@@ -7,6 +7,11 @@ const user = (state = {
   data: {},
 }, action) => {
   switch(action.type) {
+    case 'TEST': {
+      console.log(action.payload);
+
+      return state;
+    }
     default: {
       return state;
     }

@@ -1,16 +1,19 @@
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { fork, call, put, takeEvery } from 'redux-saga/effects';
+import * as actions from './actions';
+import * as types from './actionTypes';
 
 
-function* testAction(action) {
-  console.log(action.type);
-  yield put({ type: 'test' });
+function *test(action) {
+  yield put(actions.test(action.payload));
 }
 
-function* testSaga() {
-  yield takeEvery('testSaga', testAction);
+
+function *login() {
+  yield takeEvery(types.LOGIN_SUBMIT, test);
 }
 
 export default function *() {
   yield [
+    fork(login),
   ];
 }
