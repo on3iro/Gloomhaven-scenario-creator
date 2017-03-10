@@ -10,4 +10,7 @@ function* testSaga() {
   yield takeEvery('testSaga', testAction);
 }
 
-export default testSaga;
+export default function *() {
+  yield [
+  ];
+}

@@ -1,7 +1,7 @@
 /**
-  * Login
+  * Auth
   *
-  * @namespace Login
+  * @namespace Auth
   */
 
 import React, { PropTypes, Component } from 'react';
@@ -12,7 +12,7 @@ import Button from 'components/Button';
 import StyledLink from 'components/StyledLink';
 
 
-class Login extends Component {
+class Auth extends Component {
   handleSubmit = (values) => {
   }
 
@@ -26,9 +26,9 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Auth.propTypes = {
   // TODO
 };
 
 
-export default Login;
+export default Auth;
