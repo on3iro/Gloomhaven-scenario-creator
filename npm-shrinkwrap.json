@@ -2455,9 +2455,9 @@
       "dev": true
     },
     "history": {
-      "version": "3.3.0",
-      "from": "history@>=3.0.0 <4.0.0",
-      "resolved": "https://registry.npmjs.org/history/-/history-3.3.0.tgz"
+      "version": "4.6.0",
+      "from": "history@>=4.5.1 <5.0.0",
+      "resolved": "https://registry.npmjs.org/history/-/history-4.6.0.tgz"
     },
     "hmac-drbg": {
       "version": "1.0.0",
@@ -4425,7 +4425,8 @@
     "query-string": {
       "version": "4.3.2",
       "from": "query-string@>=4.2.2 <5.0.0",
-      "resolved": "https://registry.npmjs.org/query-string/-/query-string-4.3.2.tgz"
+      "resolved": "https://registry.npmjs.org/query-string/-/query-string-4.3.2.tgz",
+      "dev": true
     },
     "querystring": {
       "version": "0.2.0",
@@ -4515,13 +4516,30 @@
       "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.3.tgz"
     },
     "react-router": {
-      "version": "3.0.2",
-      "from": "react-router@>=3.0.2 <4.0.0",
-      "resolved": "https://registry.npmjs.org/react-router/-/react-router-3.0.2.tgz"
+      "version": "4.0.0",
+      "from": "react-router@>=4.0.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/react-router/-/react-router-4.0.0.tgz",
+      "dependencies": {
+        "isarray": {
+          "version": "0.0.1",
+          "from": "isarray@0.0.1",
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz"
+        },
+        "path-to-regexp": {
+          "version": "1.7.0",
+          "from": "path-to-regexp@>=1.5.3 <2.0.0",
+          "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.7.0.tgz"
+        }
+      }
+    },
+    "react-router-dom": {
+      "version": "4.0.0",
+      "from": "react-router-dom@latest",
+      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-4.0.0.tgz"
     },
     "react-router-redux": {
       "version": "4.0.8",
-      "from": "react-router-redux@>=4.0.8 <5.0.0",
+      "from": "react-router-redux@latest",
       "resolved": "https://registry.npmjs.org/react-router-redux/-/react-router-redux-4.0.8.tgz"
     },
     "react-test-renderer": {
@@ -4789,6 +4807,11 @@
       "from": "resolve-from@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-1.0.1.tgz",
       "dev": true
+    },
+    "resolve-pathname": {
+      "version": "2.0.2",
+      "from": "resolve-pathname@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/resolve-pathname/-/resolve-pathname-2.0.2.tgz"
     },
     "restore-cursor": {
       "version": "1.0.1",
@@ -5114,7 +5137,8 @@
     "strict-uri-encode": {
       "version": "1.1.0",
       "from": "strict-uri-encode@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz"
+      "resolved": "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz",
+      "dev": true
     },
     "string_decoder": {
       "version": "0.10.31",
@@ -5481,6 +5505,11 @@
       "from": "validate-npm-package-license@>=3.0.1 <4.0.0",
       "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz",
       "dev": true
+    },
+    "value-equal": {
+      "version": "0.2.0",
+      "from": "value-equal@>=0.2.0 <0.3.0",
+      "resolved": "https://registry.npmjs.org/value-equal/-/value-equal-0.2.0.tgz"
     },
     "vary": {
       "version": "1.1.0",
