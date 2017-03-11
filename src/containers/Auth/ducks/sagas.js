@@ -15,7 +15,7 @@ function *requestLogin(data) {
 
     yield put({ type: types.LOGIN_SUCCESS, payload: response.data });
   }catch (error) {
-    yield put({ type: types.LOGIN_ERROR, payload: error });
+    yield put({ type: types.LOGIN_ERROR, payload: error.response });
   }
 }
 

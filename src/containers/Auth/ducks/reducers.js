@@ -7,16 +7,28 @@ const user = (state = {
   isLoggedIn: false,
   token: '',
   data: {},
+  error: {},
 }, action) => {
   switch(action.type) {
     case types.LOGIN_SUCCESS: {
-      const { data } = action.payload;
+      const data = action.payload;
 
-      return Object.assign({}, ...state, {
+      return {
+        ...state,
         isLoggedIn: true,
         token: data.token,
         data: data.user,
-      });
+        error: '',
+      };
+    }
+
+    case types.LOGIN_ERROR: {
+      const error = action.payload;
+
+      return {
+        ...state,
+        error: error,
+      };
     }
 
     default: {
