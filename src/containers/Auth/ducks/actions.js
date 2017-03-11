@@ -9,9 +9,8 @@ export const submitLogin = data => {
 }
 
 export const test = data => {
-  console.log(data);
-
   return {
-    type: 'TEST'
+    type: 'TEST',
+    payload: data
   };
 }

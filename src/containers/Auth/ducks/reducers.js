@@ -8,8 +8,6 @@ const user = (state = {
 }, action) => {
   switch(action.type) {
     case 'TEST': {
-      console.log(action.payload);
-
       return state;
     }
     default: {
