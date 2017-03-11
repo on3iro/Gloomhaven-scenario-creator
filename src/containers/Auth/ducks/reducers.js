@@ -1,15 +1,24 @@
 import { combineReducers } from 'redux';
 
+import * as types from './actionTypes';
+
 
 const user = (state = {
-  isAuthenticated: false,
   isLoggedIn: false,
+  token: '',
   data: {},
 }, action) => {
   switch(action.type) {
-    case 'TEST': {
-      return state;
+    case types.LOGIN_SUCCESS: {
+      const { data } = action.payload;
+
+      return Object.assign({}, ...state, {
+        isLoggedIn: true,
+        token: data.token,
+        data: data.user,
+      });
     }
+
     default: {
       return state;
     }

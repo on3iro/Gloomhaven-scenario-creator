@@ -1,19 +1,34 @@
-import { fork, call, put, takeEvery } from 'redux-saga/effects';
-import * as actions from './actions';
+import axios from 'axios';
+import { fork, call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+
 import * as types from './actionTypes';
 
 
-function *test(action) {
-  yield put(actions.test(action.payload));
+function *requestLogin(data) {
+  const url = 'http://localhost:3030/api/auth/login';
+  const config = {
+    headers: {'Content-Type': 'application/json'},
+  };
+
+  try {
+    const response = yield call(axios.post, url, data, config);
+
+    yield put({ type: types.LOGIN_SUCCESS, payload: response.data });
+  }catch (error) {
+    yield put({ type: types.LOGIN_ERROR, payload: error });
+  }
 }
 
+function *authorize(action) {
+  yield call(requestLogin, action.payload);
+}
 
-function *login() {
-  yield takeEvery(types.LOGIN_SUBMIT, test);
+function *handleLogin() {
+  yield takeLatest(types.LOGIN_SUBMIT, authorize);
 }
 
 export default function *() {
   yield [
-    fork(login),
+    fork(handleLogin),
   ];
 }

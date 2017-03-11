@@ -13,12 +13,12 @@ import Wrapper from './Wrapper';
 import Button from 'components/Button';
 import StyledLink from 'components/StyledLink';
 
-import { submitLogin } from './ducks/actions';
+import { loginSubmit } from './ducks/actions';
 
 
 class Auth extends Component {
   handleSubmit = values => {
-    this.props.submitLogin(values);
+    this.props.loginSubmit(values);
   }
 
   render() {
@@ -37,7 +37,7 @@ Auth.propTypes = {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
-    submitLogin,
+    loginSubmit,
   }, dispatch);
 };
 

@@ -7,7 +7,6 @@
 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createSagaMiddleWare from 'redux-saga';
-import promise from 'redux-promise';
 
 import rootReducer from './rootReducer';
 
@@ -15,7 +14,6 @@ import rootReducer from './rootReducer';
 export default function configureStore(initialState) {
   const sagaMiddleWare = createSagaMiddleWare();
   const middleWares = [
-    promise,
     sagaMiddleWare,
   ];
 
