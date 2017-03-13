@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getLoggedIn } from './ducks/selectors';
 
 
-const PrivateRoute = ({ component, ...rest }) => (
+const ProtectedRoute = ({ component, ...rest }) => (
   <Route {...rest} render={props => (
     rest.isLoggedIn
       ? (
@@ -25,4 +25,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 }
 
-export default connect(mapStateToProps, null)(PrivateRoute);
+export default connect(mapStateToProps, null)(ProtectedRoute);

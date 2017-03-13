@@ -18,7 +18,7 @@ import Auth from 'containers/Auth';
 import UserProfile from 'containers/ProfilePage';
 import Register from 'containers/RegisterPage';
 
-import PrivateRoute from 'containers/Auth/PrivateRoute';
+import ProtectedRoute from 'containers/Auth/ProtectedRoute';
 
 export default class App extends Component {
   /**
@@ -39,7 +39,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/impressum" component={Impressum} />
-            <PrivateRoute path="/profile" component={UserProfile} />
+            <ProtectedRoute path="/profile" component={UserProfile} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Auth} />
           </Switch>
