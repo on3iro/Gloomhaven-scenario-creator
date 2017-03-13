@@ -5,17 +5,33 @@
   */
 
 import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
+import * as selectors from 'containers/Auth/ducks/selectors';
 import Wrapper from './Wrapper';
 import RegisterForm from './RegisterForm';
 
 
-const Register = () => {
+const Register = props => {
+  const { from } = props.location.state || { from: { pathname: '/' } };
+
   return (
-    <Wrapper>
-      <RegisterForm />
-    </Wrapper>
+    props.isLoggedIn
+    ? (
+      <Redirect to={from} />
+    ) : (
+      <Wrapper>
+        <RegisterForm />
+      </Wrapper>
+    )
   );
+}
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isLoggedIn: selectors.getLoggedIn(state),
+  };
 };
 
-export default Register;
+export default connect(mapStateToProps, null)(Register);
