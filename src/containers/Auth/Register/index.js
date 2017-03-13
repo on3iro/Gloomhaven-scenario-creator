@@ -10,7 +10,7 @@ import { Redirect } from 'react-router-dom';
 
 import * as selectors from '../ducks/selectors';
 
-import Wrapper from './Wrapper';
+import Wrapper from '../Wrapper';
 import RegisterForm from './RegisterForm';
 
 
