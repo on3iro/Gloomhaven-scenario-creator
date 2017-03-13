@@ -10,6 +10,10 @@ import Login from './Login';
 
 
 class Auth extends Component {
+  state = {
+    redirectToReferer: false,
+  }
+
   render() {
     return (
       <Login />

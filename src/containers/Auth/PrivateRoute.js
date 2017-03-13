@@ -1,18 +1,28 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { getLoggedIn } from './ducks/selectors';
 
 
-const PrivateRoute = ({ component, ...rest }) => {
+const PrivateRoute = ({ component, ...rest }) => (
   <Route {...rest} render={props => (
-    props.isLoggedIn ? (
+    rest.isLoggedIn
+      ? (
       React.createElement(component, props)
     ) : (
       <Redirect to={{
         pathname: '/login',
-        state: { from 'props.location' }
+        state: { from: props.location }
       }} />
     )
   )} />
+);
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isLoggedIn: getLoggedIn(state),
+  };
 }
 
-export default PrivateRoute;
+export default connect(mapStateToProps, null)(PrivateRoute);

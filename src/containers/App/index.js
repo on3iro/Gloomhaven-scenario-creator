@@ -11,11 +11,14 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Wrapper from './Wrapper';
 import Content from './Content';
+
 import HomePage from 'containers/HomePage';
 import Impressum from 'containers/ImpressumPage';
 import Auth from 'containers/Auth';
 import UserProfile from 'containers/ProfilePage';
 import Register from 'containers/RegisterPage';
+
+import PrivateRoute from 'containers/Auth/PrivateRoute';
 
 export default class App extends Component {
   /**
@@ -36,7 +39,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/impressum" component={Impressum} />
-            <Route path="/profile" component={UserProfile} />
+            <PrivateRoute path="/profile" component={UserProfile} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Auth} />
           </Switch>
