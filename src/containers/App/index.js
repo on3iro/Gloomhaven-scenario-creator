@@ -5,7 +5,10 @@
   */
 
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { Link, Route, Switch } from 'react-router-dom';
+
+import * as authSelectors from 'containers/Auth/ducks/selectors';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -21,7 +24,7 @@ import UserProfile from 'containers/Auth/UserProfile';
 
 import ProtectedRoute from 'containers/Auth/ProtectedRoute';
 
-export default class App extends Component {
+export class App extends Component {
   /**
    * Main App component
    * Wraps children
@@ -35,7 +38,7 @@ export default class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header />
+        <Header isLoggedIn={this.props.isLoggedIn} />
         <Content>
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -51,9 +54,15 @@ export default class App extends Component {
     );
   }
 }
-        // <Footer />
-        // <Header />
 
 App.propTypes = {
   children: PropTypes.element,
 };
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isLoggedIn: authSelectors.getLoggedIn(state),
+  };
+};
+
+export default connect(mapStateToProps, null)(App);

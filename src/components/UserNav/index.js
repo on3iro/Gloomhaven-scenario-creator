@@ -4,9 +4,6 @@
   */
 
 import React from 'react';
-import { connect } from 'react-redux';
-
-import * as selectors from '../ducks/selectors';
 
 import NavBar from './NavBar';
 import NavLink from './NavLink';
@@ -41,10 +38,4 @@ const UserNav = props => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    isLoggedIn: selectors.getLoggedIn(state),
-  };
-};
-
-export default connect(mapStateToProps, null)(UserNav);
+export default UserNav;

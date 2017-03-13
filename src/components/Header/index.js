@@ -7,19 +7,19 @@
 import  React from 'react';
 
 import Navigation from 'components/Navigation';
-import UserNav from 'containers/Auth/UserNav';
+import UserNav from 'components/Auth/UserNav';
 import A from './A';
 import Wrapper from './Wrapper';
 
 
-export const Header = () => {
+export const Header = props => {
   return (
     <Wrapper>
       <A href="#">
         Logo
       </A>
       <Navigation />
-      <UserNav />
+      <UserNav {...props} />
     </Wrapper>
   );
 };
