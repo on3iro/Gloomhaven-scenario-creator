@@ -7,7 +7,7 @@
 import  React from 'react';
 
 import Navigation from 'components/Navigation';
-import UserNav from 'components/UserNav';
+import UserNav from 'containers/Auth/UserNav';
 import A from './A';
 import Wrapper from './Wrapper';
 
