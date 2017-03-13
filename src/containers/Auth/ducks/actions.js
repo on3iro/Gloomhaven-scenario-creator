@@ -7,3 +7,9 @@ export const loginSubmit = data => {
     payload: data,
   };
 }
+
+export const logout = () => {
+  return {
+    type: types.LOGOUT,
+  };
+};

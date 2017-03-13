@@ -15,6 +15,7 @@ import Content from './Content';
 import HomePage from 'containers/HomePage';
 import Impressum from 'containers/ImpressumPage';
 import Auth from 'containers/Auth';
+import Logout from 'containers/Auth/Logout';
 import UserProfile from 'containers/ProfilePage';
 import Register from 'containers/RegisterPage';
 
@@ -42,6 +43,7 @@ export default class App extends Component {
             <ProtectedRoute path="/profile" component={UserProfile} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Auth} />
+            <Route path="/logout" component={Logout} />
           </Switch>
         </Content>
         <Footer />

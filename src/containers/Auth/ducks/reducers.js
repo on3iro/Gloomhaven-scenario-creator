@@ -31,6 +31,15 @@ const user = (state = {
       };
     }
 
+    case types.LOGOUT: {
+      return {
+        ...state,
+        isLoggedIn: false,
+        toke: '',
+        data: {},
+      };
+    }
+
     default: {
       return state;
     }

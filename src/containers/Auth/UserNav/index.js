@@ -18,9 +18,14 @@ const UserNav = props => {
       {
         props.isLoggedIn
           ? (
-            <NavLink to="/profile" >
-              Profile
-            </NavLink>
+            <div>
+              <NavLink to="/profile" >
+                Profile
+              </NavLink>
+              <NavLink to="/logout" >
+                Logout
+              </NavLink>
+            </div>
           ) : (
             <div>
               <NavLink to="/login" >
