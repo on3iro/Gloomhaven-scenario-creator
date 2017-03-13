@@ -16,8 +16,8 @@ import HomePage from 'containers/HomePage';
 import Impressum from 'containers/ImpressumPage';
 import Auth from 'containers/Auth';
 import Logout from 'containers/Auth/Logout';
-import UserProfile from 'containers/ProfilePage';
-import Register from 'containers/RegisterPage';
+import Register from 'containers/Auth/Register';
+import UserProfile from 'containers/Auth/UserProfile';
 
 import ProtectedRoute from 'containers/Auth/ProtectedRoute';
 

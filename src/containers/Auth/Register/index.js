@@ -8,7 +8,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import * as selectors from 'containers/Auth/ducks/selectors';
+import * as selectors from '../ducks/selectors';
+
 import Wrapper from './Wrapper';
 import RegisterForm from './RegisterForm';
 
