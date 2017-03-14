@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -19,10 +19,15 @@ const ProtectedRoute = ({ component, ...rest }) => (
   )} />
 );
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: getLoggedIn(state),
   };
-}
+};
+
+ProtectedRoute.propTypes = {
+  component: PropTypes.any.isRequired,
+  location: PropTypes.object
+};
 
 export default connect(mapStateToProps, null)(ProtectedRoute);

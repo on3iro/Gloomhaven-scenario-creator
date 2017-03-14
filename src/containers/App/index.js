@@ -6,7 +6,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import * as authSelectors from 'containers/Auth/ducks/selectors';
 
@@ -56,10 +56,10 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.element,
+  isLoggedIn: PropTypes.bool,
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: authSelectors.getLoggedIn(state),
   };

@@ -5,7 +5,7 @@
   * @namespace Reducer
   */
 
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleWare from 'redux-saga';
 
 import rootReducer from './rootReducer';

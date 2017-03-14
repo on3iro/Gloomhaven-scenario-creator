@@ -6,7 +6,7 @@ export const loginSubmit = data => {
     type: types.LOGIN_SUBMIT,
     payload: data,
   };
-}
+};
 
 export const logout = () => {
   return {
@@ -19,4 +19,4 @@ export const registerSubmit = data => {
     type: types.REGISTER_SUBMIT,
     payload: data,
   };
-}
+};

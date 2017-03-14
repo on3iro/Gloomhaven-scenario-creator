@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Input from 'components/Input';
 import Span from 'components/Span';
@@ -16,6 +16,13 @@ const RenderField = ({ input, label, type, meta: { touched, error } }) => {
       {touched && error && <Span error={touched && error}>{error}</Span>}
     </div>
   );
+};
+
+RenderField.propTypes = {
+  input: PropTypes.object.isRequired,
+  label: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  meta: PropTypes.object,
 };
 
 export default RenderField;

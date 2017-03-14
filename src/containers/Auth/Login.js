@@ -25,7 +25,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  // TODO
+  loginSubmit: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => {

@@ -10,7 +10,6 @@ import { Field, reduxForm } from 'redux-form';
 
 import H1 from 'components/H1';
 import Button from 'components/Button';
-import Input from 'components/Input';
 
 import RenderField from './RenderField';
 
@@ -21,7 +20,7 @@ const validate = values => {
   if(!values.email) {
     errors.email = 'Required';
   }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address'
+    errors.email = 'Invalid email address';
   }
 
   if(!values.password) {
@@ -60,10 +59,10 @@ const RegisterForm = props => {
       <Button submit>Register Now</Button>
     </form>
   );
-}
+};
 
 RegisterForm.propTypes = {
-  // TODO
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default reduxForm({

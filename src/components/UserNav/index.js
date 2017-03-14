@@ -3,7 +3,7 @@
   * @namespace UserNav
   */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import NavBar from './NavBar';
 import NavLink from './NavLink';
@@ -36,6 +36,10 @@ const UserNav = props => {
       }
     </NavBar>
   );
+};
+
+UserNav.propTypes = {
+  isLoggedIn: PropTypes.bool,
 };
 
 export default UserNav;

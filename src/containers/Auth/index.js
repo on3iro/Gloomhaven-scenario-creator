@@ -28,14 +28,15 @@ class Auth extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: selectors.getLoggedIn(state),
   };
 };
 
 Auth.propTypes = {
-  // TODO
+  location: PropTypes.object,
+  isLoggedIn: PropTypes.bool,
 };
 
 export default connect(mapStateToProps, null)(Auth);

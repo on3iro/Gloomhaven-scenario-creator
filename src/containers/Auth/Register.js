@@ -39,7 +39,9 @@ class Register extends Component {
 }
 
 Register.propTypes = {
-  // TODO
+  registerSubmit: PropTypes.func.isRequired,
+  location: PropTypes.object,
+  isLoggedIn: PropTypes.bool,
 };
 
 const mapDispatchToProps = dispatch => {
@@ -48,7 +50,7 @@ const mapDispatchToProps = dispatch => {
   }, dispatch);
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: selectors.getLoggedIn(state),
   };

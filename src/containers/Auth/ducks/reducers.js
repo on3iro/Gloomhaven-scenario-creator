@@ -45,7 +45,7 @@ const user = (state = {
       return state;
     }
   }
-}
+};
 
 const authReducer = combineReducers({
   user,

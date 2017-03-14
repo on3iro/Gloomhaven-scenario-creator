@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { fork, call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { fork, call, put, takeLatest } from 'redux-saga/effects';
 
 import * as types from './actionTypes';
 
@@ -46,7 +46,7 @@ function *register(action) {
 // Auth thread
 function *handleAuth() {
   yield takeLatest(types.LOGIN_SUBMIT, authorize);
-  yield takeLatest(types.REGISTER_SUBMIT, register)
+  yield takeLatest(types.REGISTER_SUBMIT, register);
 }
 
 export default function *() {

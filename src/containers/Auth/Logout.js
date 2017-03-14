@@ -22,10 +22,11 @@ class Logout extends Component {
 }
 
 Logout.propTypes = {
-  // TODO
+  isLoggedIn: PropTypes.bool,
+  logout: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: selectors.getLoggedIn(state),
   };
