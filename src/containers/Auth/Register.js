@@ -31,7 +31,7 @@ class Register extends Component {
           <Redirect to={from} />
         ) : (
             <Wrapper>
-              <RegisterForm onSubmi{this.handleSubmit} />
+              <RegisterForm onSubmit={this.handleSubmit} />
             </Wrapper>
         )
     );

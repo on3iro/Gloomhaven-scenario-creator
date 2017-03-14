@@ -13,3 +13,10 @@ export const logout = () => {
     type: types.LOGOUT,
   };
 };
+
+export const registerSubmit = data => {
+  return {
+    type: types.REGISTER_SUBMIT,
+    payload: data,
+  };
+}
