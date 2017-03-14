@@ -1,4 +1,4 @@
-/**
+/*
   * The user registration form
   *
   * @namespace RegisterPage.RegisterForm
@@ -28,6 +28,10 @@ const validate = values => {
     errors.password = 'Required';
   }
 
+  if(!values.name) {
+    errors.name = 'Required';
+  }
+
   if(!values.confirm) {
     errors.confirm = 'Required';
   }else if(values.confirm !== values.password) {
@@ -43,6 +47,9 @@ const RegisterForm = props => {
       <H1>Register</H1>
       <Field name="email" type="text"
         component={RenderField} label="email"
+      />
+      <Field name="name" type="text"
+        component={RenderField} label="name"
       />
       <Field name="password" type="password"
         component={RenderField} label="password"

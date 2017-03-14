@@ -22,6 +22,7 @@ const user = (state = {
       };
     }
 
+    case types.REGISTER_ERROR:
     case types.LOGIN_ERROR: {
       const error = action.payload;
 
