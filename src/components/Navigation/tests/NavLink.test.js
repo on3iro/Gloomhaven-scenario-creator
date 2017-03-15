@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import NavLink, { Li, RestyledLink } from '../NavLink';
+import { NavLink, Li, RestyledLink } from '../NavLink';
 
 
 

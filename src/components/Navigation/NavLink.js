@@ -24,7 +24,7 @@ export const RestyledLink = styled(StyledLink)`
   color: #fff;
 `;
 
-const NavLink = props => {
+export const NavLink = props => {
   return (
     <Li>
       <RestyledLink to={props.to}>{props.children}</RestyledLink>
