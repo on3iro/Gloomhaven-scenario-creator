@@ -36,7 +36,7 @@ const user = (state = {
       return {
         ...state,
         isLoggedIn: false,
-        toke: '',
+        token: '',
         data: {},
       };
     }
