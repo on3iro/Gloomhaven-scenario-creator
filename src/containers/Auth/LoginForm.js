@@ -29,7 +29,7 @@ const validate = values => {
   return errors;
 };
 
-const LoginForm = props => {
+export const LoginForm = props => {
   return (
     <form onSubmit={props.handleSubmit}>
       <H1>Login</H1>
