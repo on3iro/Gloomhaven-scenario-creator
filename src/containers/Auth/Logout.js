@@ -7,7 +7,7 @@ import * as selectors from './ducks/selectors';
 import { logout } from './ducks/actions';
 
 
-class Logout extends Component {
+export class Logout extends Component {
   componentWillMount() {
     if(this.props.isLoggedIn) this.props.logout();
   }
