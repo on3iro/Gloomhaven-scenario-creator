@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import StyledLink from 'components/StyledLink';
 
 
-const Li = styled.li`
+export const Li = styled.li`
   float: left;
   display: inline;
 
@@ -20,14 +20,14 @@ const Li = styled.li`
   }
 `;
 
-const Link = styled(StyledLink)`
+export const RestyledLink = styled(StyledLink)`
   color: #fff;
 `;
 
 const NavLink = props => {
   return (
     <Li>
-      <Link to={props.to}>{props.children}</Link>
+      <RestyledLink to={props.to}>{props.children}</RestyledLink>
     </Li>
   );
 };
