@@ -23,21 +23,21 @@ const renderComponent = newProps => {
 describe('<RegisterForm />', () => {
   it('should render <form>', () => {
     const { renderedWrapper } = renderComponent();
-    expect(renderedWrapper.find('form').length).toEqual(1);
+    expect(renderedWrapper.find('form').length).toMatchSnapshot();
   });
 
   it('should render <H1>', () => {
     const { renderedWrapper } = renderComponent();
-    expect(renderedWrapper.find(H1).length).toEqual(1);
+    expect(renderedWrapper.find(H1).length).toMatchSnapshot();
   });
 
   it('should render Fields', () => {
     const { renderedWrapper } = renderComponent();
-    expect(renderedWrapper.find(Field).length).toMatchSnapshot;
+    expect(renderedWrapper.find(Field).length).toMatchSnapshot();
   });
 
   it('Should render <Button />', () => {
     const { renderedWrapper } = renderComponent();
-    expect(renderedWrapper.find(Button).length).toEqual(1);
+    expect(renderedWrapper.find(Button).length).toMatchSnapshot();
   });
 });
