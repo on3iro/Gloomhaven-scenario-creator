@@ -2,18 +2,36 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Wrapper from '../Wrapper';
+import { Register } from '../Register';
 import RegisterForm from '../RegisterForm';
-import RegisterPage from '../index';
 
 
-describe('<RegisterPage />', () => {
+const renderWrapper = newProps => {
+  const props = {
+    registerSubmit: () => {},
+    location: {
+      state: 'test'
+    },
+    isLoggedIn: false,
+    ...newProps,
+  };
+
+  const renderedWrapper = shallow(<Register {...props} />);
+
+  return {
+    props,
+    renderedWrapper,
+  };
+}
+
+describe('<Register />', () => {
   it('should render <Wrapper />', () => {
-    const wrapper = shallow(<RegisterPage />);
-    expect(wrapper.find(Wrapper).length).toEqual(1);
+    const { renderedWrapper } = renderWrapper();
+    expect(renderedWrapper.find(Wrapper).length).toEqual(1);
   });
 
   it('should render <RegisterForm />', () => {
-    const wrapper = shallow(<RegisterPage />);
-    expect(wrapper.find(RegisterForm).length).toEqual(1);
+    const { renderedWrapper } = renderWrapper();
+    expect(renderedWrapper.find(RegisterForm).length).toEqual(1);
   });
 });

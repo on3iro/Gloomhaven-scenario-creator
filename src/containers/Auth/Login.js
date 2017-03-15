@@ -9,7 +9,7 @@ import StyledLink from 'components/StyledLink';
 import { loginSubmit } from './ducks/actions';
 
 
-class Login extends Component {
+export class Login extends Component {
   handleSubmit = values => {
     this.props.loginSubmit(values);
   }

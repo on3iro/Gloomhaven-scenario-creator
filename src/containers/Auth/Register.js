@@ -17,7 +17,7 @@ import RegisterForm from './RegisterForm';
 import { registerSubmit } from './ducks/actions';
 
 
-class Register extends Component {
+export class Register extends Component {
   handleSubmit = values => {
     this.props.registerSubmit(values);
   }

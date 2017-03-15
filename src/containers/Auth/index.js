@@ -12,7 +12,7 @@ import * as selectors from './ducks/selectors';
 import Login from './Login';
 
 
-class Auth extends Component {
+export class Auth extends Component {
   render() {
     const { from } = this.props.location.state || { from: { pathname: '/' } };
 

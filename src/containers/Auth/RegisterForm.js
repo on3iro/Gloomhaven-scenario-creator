@@ -40,7 +40,7 @@ const validate = values => {
   return errors;
 };
 
-const RegisterForm = props => {
+export const RegisterForm = props => {
   return (
     <form onSubmit={props.handleSubmit}>
       <H1>Register</H1>
