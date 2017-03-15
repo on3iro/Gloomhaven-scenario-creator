@@ -14,8 +14,9 @@ import Button from 'components/Button';
 import RenderField from './RenderField';
 
 
-const validate = values => {
+export const validate = values => {
   const errors = {};
+  const REQUIRED = 'Required';
 
   if(!values.email) {
     errors.email = 'Required';
@@ -24,15 +25,15 @@ const validate = values => {
   }
 
   if(!values.password) {
-    errors.password = 'Required';
+    errors.password = REQUIRED;
   }
 
   if(!values.name) {
-    errors.name = 'Required';
+    errors.name = REQUIRED;
   }
 
   if(!values.confirm) {
-    errors.confirm = 'Required';
+    errors.confirm = REQUIRED;
   }else if(values.confirm !== values.password) {
     errors.confirm = 'Passwords do not match';
   }
