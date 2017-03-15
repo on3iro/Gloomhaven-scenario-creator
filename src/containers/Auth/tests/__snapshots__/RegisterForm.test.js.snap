@@ -1,0 +1,7 @@
+exports[`<RegisterForm /> Should render <Button /> 1`] = `1`;
+
+exports[`<RegisterForm /> should render <H1> 1`] = `1`;
+
+exports[`<RegisterForm /> should render <form> 1`] = `1`;
+
+exports[`<RegisterForm /> should render Fields 1`] = `4`;
