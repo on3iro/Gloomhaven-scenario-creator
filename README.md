@@ -38,7 +38,7 @@ because I still have no confirmation of approval for the project from Isaac Chil
   - [ ] Basic scenario creation
   - [ ] Basic campaign creation
 - [ ] Initial Frontend
-  - [ ] Login/Logout/Register
+  - [x] Login/Logout/Register
   - [ ] Create private scenarios
   - [ ] Create private campaigns
 - [ ] Hosting first Alpha-Version

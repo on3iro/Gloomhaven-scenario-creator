@@ -1,0 +1,3 @@
+exports[`<HomePage /> should render Wrapper 1`] = `1`;
+
+exports[`<HomePage /> should render h1 1`] = `1`;

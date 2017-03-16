@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Wrapper from './Wrapper';
 
 
@@ -14,7 +14,6 @@ const Footer = () => {
   return (
     <Wrapper>
       <Link to="/impressum">Impressum</Link>
-      <Link to="/agb">AGB</Link>
     </Wrapper>
   );
 };
