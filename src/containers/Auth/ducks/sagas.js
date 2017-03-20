@@ -16,7 +16,7 @@ export function *requestLogin(data) {
 
     yield put({ type: types.LOGIN_SUCCESS, payload: response.data });
   }catch (error) {
-    yield put({ type: types.LOGIN_ERROR, payload: error.response });
+    yield put({ type: types.LOGIN_ERROR, payload: error.message });
   }
 }
 
@@ -43,7 +43,7 @@ export function *register(action) {
   yield call(requestRegister, action.payload);
 }
 
-// Auth thread
+// Auth watcher
 export function *handleAuth() {
   yield takeLatest(types.LOGIN_SUBMIT, authorize);
   yield takeLatest(types.REGISTER_SUBMIT, register);
