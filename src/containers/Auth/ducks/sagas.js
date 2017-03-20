@@ -5,7 +5,7 @@ import * as types from './actionTypes';
 
 
 // Login
-function *requestLogin(data) {
+export function *requestLogin(data) {
   const url = 'http://localhost:3030/api/auth/login';
   const config = {
     headers: {'Content-Type': 'application/json'},
@@ -20,12 +20,12 @@ function *requestLogin(data) {
   }
 }
 
-function *authorize(action) {
+export function *authorize(action) {
   yield call(requestLogin, action.payload);
 }
 
 // Register
-function *requestRegister(data) {
+export function *requestRegister(data) {
   const url = 'http://localhost:3030/api/auth/register';
   const config = {
     headers: {'Content-Type': 'application/json'},
@@ -39,12 +39,12 @@ function *requestRegister(data) {
   }
 }
 
-function *register(action) {
+export function *register(action) {
   yield call(requestRegister, action.payload);
 }
 
 // Auth thread
-function *handleAuth() {
+export function *handleAuth() {
   yield takeLatest(types.LOGIN_SUBMIT, authorize);
   yield takeLatest(types.REGISTER_SUBMIT, register);
 }
