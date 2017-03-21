@@ -94,6 +94,46 @@ describe('register', () => {
     });
   });
 
-  describe('requestRegiser generator', () => {
+  describe('requestRegister generator', () => {
+    const data = { test: 'test' };
+    let requestRegisterGenerator;
+
+    beforeEach(() => {
+      requestRegisterGenerator = sagas.requestRegister(data);
+    });
+
+    it('should call axios.post', () => {
+      const callDescriptor = requestRegisterGenerator.next().value;
+      const expectedYield = call(axios.post, 'http://localhost:3030/api/auth/register', data, { headers: {'Content-Type': 'application/json'}});
+      expect(callDescriptor).toMatchSnapshot();
+    });
+
+    it('should put REGISTER_SUCCESS action with payload', () => {
+      const response = {
+        data: {
+          id: 1,
+          email: 'foo@bar.com',
+          name: 'foo',
+          token: 'abc123',
+        }
+      };
+      requestRegisterGenerator.next().value;
+      const putDescriptor = requestRegisterGenerator.next(response).value;
+      const expectedYield = put({ type: types.REGISTER_SUCCESS, payload: {
+        id: 1,
+        email: 'foo@bar.com',
+        name: 'foo',
+        token: 'abc123',
+      }});
+      expect(putDescriptor).toMatchSnapshot();
+    });
+
+    it('should put REGISTER_ERROR action', () => {
+      const response = new Error('Some error');
+      requestRegisterGenerator.next().value;
+      const putDescriptor = requestRegisterGenerator.throw(response).value;
+      const expectedYield = put({ type: types.REGISTER_ERROR, payload: 'Some error'  });
+      expect(putDescriptor).toMatchSnapshot();
+    });
   });
 });

@@ -41,21 +41,6 @@ Object {
 }
 `;
 
-exports[`login authorize saga should call requestLogin with action.payload 1`] = `
-Object {
-  "@@redux-saga/IO": true,
-  "CALL": Object {
-    "args": Array [
-      Object {
-        "test": "test",
-      },
-    ],
-    "context": null,
-    "fn": [Function],
-  },
-}
-`;
-
 exports[`login requestLogin generator should call axios.post 1`] = `
 Object {
   "@@redux-saga/IO": true,
@@ -108,12 +93,12 @@ Object {
 }
 `;
 
-exports[`login requestLogin should call axios.post 1`] = `
+exports[`register requestRegister generator should call axios.post 1`] = `
 Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://localhost:3030/api/auth/login",
+      "http://localhost:3030/api/auth/register",
       Object {
         "test": "test",
       },
@@ -129,20 +114,20 @@ Object {
 }
 `;
 
-exports[`login requestLogin should put LOGIN_ERROR action 1`] = `
+exports[`register requestRegister generator should put REGISTER_ERROR action 1`] = `
 Object {
   "@@redux-saga/IO": true,
   "PUT": Object {
     "action": Object {
-      "payload": "Some error",
-      "type": "LOGIN_ERROR",
+      "payload": undefined,
+      "type": "REGISTER_ERROR",
     },
     "channel": null,
   },
 }
 `;
 
-exports[`login requestLogin should put LOGIN_SUCCESS action with payload 1`] = `
+exports[`register requestRegister generator should put REGISTER_SUCCESS action with payload 1`] = `
 Object {
   "@@redux-saga/IO": true,
   "PUT": Object {
@@ -153,7 +138,7 @@ Object {
         "name": "foo",
         "token": "abc123",
       },
-      "type": "LOGIN_SUCCESS",
+      "type": "REGISTER_SUCCESS",
     },
     "channel": null,
   },
