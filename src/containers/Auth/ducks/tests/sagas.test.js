@@ -23,29 +23,29 @@ describe('handleAuthSaga', () => {
 });
 
 describe('login', () => {
-  describe('authorize saga', () => {
+  describe('authorize generator', () => {
     const action = { type: types.LOGIN_SUBMIT, payload: {
       test: 'test',
     }};
-    const authorizeSaga = sagas.authorize(action);
+    const authorizeGenerator = sagas.authorize(action);
 
     it('should call requestLogin with action.payload', () => {
-      const callDescriptor = authorizeSaga.next().value;
+      const callDescriptor = authorizeGenerator.next().value;
       const expectedYield = call(sagas.requestLogin, { test: 'test' });
       expect(callDescriptor).toMatchSnapshot();
     });
   });
 
-  describe('requestLogin', () => {
+  describe('requestLogin generator', () => {
     const data = { test: 'test' };
-    let requestLoginSaga;
+    let requestLoginGenerator;
 
     beforeEach(() => {
-      requestLoginSaga = sagas.requestLogin(data);
+      requestLoginGenerator = sagas.requestLogin(data);
     });
 
     it('should call axios.post', () => {
-      const callDescriptor = requestLoginSaga.next().value;
+      const callDescriptor = requestLoginGenerator.next().value;
       const expectedYield = call(axios.post, 'http://localhost:3030/api/auth/login', data, { headers: {'Content-Type': 'application/json'}});
       expect(callDescriptor).toMatchSnapshot();
     });
@@ -59,8 +59,8 @@ describe('login', () => {
           token: 'abc123',
         }
       };
-      requestLoginSaga.next().value;
-      const putDescriptor = requestLoginSaga.next(response).value;
+      requestLoginGenerator.next().value;
+      const putDescriptor = requestLoginGenerator.next(response).value;
       const expectedYield = put({ type: types.LOGIN_SUCCESS, payload: {
         id: 1,
         email: 'foo@bar.com',
@@ -72,10 +72,28 @@ describe('login', () => {
 
     it('should put LOGIN_ERROR action', () => {
       const response = new Error('Some error');
-      requestLoginSaga.next().value;
-      const putDescriptor = requestLoginSaga.throw(response).value;
+      requestLoginGenerator.next().value;
+      const putDescriptor = requestLoginGenerator.throw(response).value;
       const expectedYield = put({ type: types.LOGIN_ERROR, payload: 'Some error'  });
       expect(putDescriptor).toMatchSnapshot();
     });
+  });
+});
+
+describe('register', () => {
+  describe('register generator', () => {
+    const action = { type: types.REGISTER_SUBMIT, payload: {
+      test: 'test',
+    }};
+    const registerGenerator = sagas.register(action);
+
+    it('should call requestRegister with action payload', () => {
+      const callDescriptor = registerGenerator.next().value;
+      const expectedYield = call(sagas.requestRegister, { test: 'test' });
+      expect(callDescriptor).toEqual(expectedYield);
+    });
+  });
+
+  describe('requestRegiser generator', () => {
   });
 });
