@@ -10,10 +10,6 @@ import Wrapper from './Wrapper';
 
 
 class Accordion extends Component {
-  propTypes = {
-    entries: PropTypes.arrayOf(PropTypes.object).isRequired,
-  }
-
   constructor(props) {
     super(props);
 
@@ -42,7 +38,7 @@ class Accordion extends Component {
     this.setState({
       entries: [...this.state.entries.slice(0)].map(entry => {
         return Object.assign(entry, {
-          active: entry.id === id ? true : false,
+          active: (entry.id === id && !entry.active) ? true : false,
         });
       })
     });
@@ -73,6 +69,10 @@ class Accordion extends Component {
     );
   }
 }
+
+Accordion.propTypes = {
+  entries: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 
 export default Accordion;
