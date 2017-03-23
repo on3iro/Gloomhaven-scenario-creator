@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Wrapper from './Wrapper';
+
 
 export const Impressum = () => {
 /**
@@ -10,7 +12,9 @@ export const Impressum = () => {
   */
 
   return (
-    <h1>This is Impressum!</h1>
+    <Wrapper>
+      <h1>This is Impressum!</h1>
+    </Wrapper>
   );
 };
 

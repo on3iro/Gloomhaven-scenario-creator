@@ -61,7 +61,7 @@
       "text"
     ]
   },
-  "homepage": "https://github.com/on3iro/passCreator-Frontend#readme",
+  "homepage": "https://github.com/on3iro/gloomhaven-scenario-creator#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel": "^6.5.2",

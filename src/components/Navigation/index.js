@@ -6,16 +6,19 @@
 
 import React from 'react';
 
+import Wrapper from './Wrapper';
 import NavBar from './NavBar';
 import NavLink from './NavLink';
 
 const Navigation = () => {
   return (
-    <NavBar>
-      <NavLink to="/">
-        Home
-      </NavLink>
-    </NavBar>
+    <Wrapper>
+      <NavBar>
+        <NavLink to="/">
+          Home
+        </NavLink>
+      </NavBar>
+    </Wrapper>
   );
 };
 
