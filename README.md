@@ -12,6 +12,16 @@
 * [Contribution](#contribution)
 
 ## About
+**Update 15.04.2017:**
+I still have not heard back from Isaac Childres and unfortunately he has not yet provided any information
+regarding the legal use of the game asset files he provided. Furthermore I am currently rather busy,
+which is why the project is on halt for now. This does not mean that it is discontinued by any means,
+but I want to get this whole legal thing sorted out before I invest more time in this rather complex endevor.
+Lastly I consider a rewrite of the frontend in [Elm](http://elm-lang.org/), because I started learning the language
+and am liking it a lot. The downside of this would be, that it might be harder for contributers to actually dive in
+and contribute. But as this is a hobby project and I want to have some fun with it, this might be the direction I will take
+it in.
+
 __As of 12.02.2017 this project is still in very early development and does not yet
 take any contributions!__
 
