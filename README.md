@@ -12,6 +12,16 @@
 * [Contribution](#contribution)
 
 ## About
+**Update 30.05.2017**
+Another month went by and there still is no official statement regarding the licensing of the asset files Isaac provided nor has he replied to one of my messages and emails. I am still very busy writing my bachelors thesis. At this point I am actually considering to discontinue this project, though, because of the following reasons:
+* By playing Gloomhaven on a regular basis (about 80 hours in with my group) I learned that this game probably already offers enough scenarios and content on its own, not to speak of the 17 solo scenarios and other additional content already created
+* I am a bit short on time right now and in the near future
+* Legal issues are still not sorted out and there is no actual clue if and when they might be
+
+On the other hand it might be possible to tackle this project as a team from the get go. So if you have any ideas and would
+like to contribute or breathe new life into the project, feel free to reach out to me and open an issue.
+
+
 **Update 15.04.2017:**
 I still have not heard back from Isaac Childres and unfortunately he has not yet provided any information
 regarding the legal use of the game asset files he provided. Furthermore I am currently rather busy,
@@ -67,5 +77,4 @@ because I still have no confirmation of approval for the project from Isaac Chil
 - [ ] Asset creator
 
 ## Contribution
-I am still developing the project baseline and therefore am not yet taking any contributions.
-Eventually I will, though!
+Please have a look at the latest **update** at the top of the README.
